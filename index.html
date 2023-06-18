@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="UTF-8" http-equiv="encoding">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<title>Autority Graph</title>
+
+<style>
+	body{
+		/*background: rgb(40, 40, 40);
+		background: rgb(10, 20, 30);
+		background: black;*/
+		background-image: url('darkbluebackground.png');
+	}
+	canvas, svg{
+		position: absolute;
+	}
+	#canvasvertices{
+		z-index: 10;
+	}
+	#canvasedges{
+		z-index: 1;
+	}
+	#canvasauthors{
+		z-index: 1000;
+	}
+	/*#hiddencanvasvertices{
+		visibility: hidden;
+	}*/
+	svg{
+		z-index: 100;
+	}
+	h1, span{
+		color: white;
+	}
+	h1{
+		font-family: roboto;
+		text-align: center;
+	}
+	#authorname{
+		font-family: roboto;
+		position: relative;
+		text-anchor: middle;
+		z-index: 1001;
+		pointer-events: none;
+		/*color: black;*/
+	}
+
+</style>
+<body>
+
+<h1 id="title">Les Gourous du management</h1>
+
+<div>
+
+<span id="b1">Nombre Minimum :
+	<button type="button" id="b1min">-</button>
+	<span id="b1value"></span>
+	<button type="button" id="b1plus">+</button>
+</span>
+
+<span id="b2">Maximum :
+	<button type="button" id="b2min">-</button>
+	<span id="b2value"></span>
+	<button type="button" id="b2plus">+</button>
+</span>
+
+<span> de professeurs partageant 2 ouvrages.</span>
+
+</div>
+
+<div>
+
+<span id="b3">Nombre maximum de liens visibles à l'écran :
+	<button type="button" id="b3min">-</button>
+	<span id="b3value"></span>
+	<button type="button" id="b3plus">+</button>
+</span>
+
+</div>
+
+<div>
+<span>Gourous</span>
+</div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="js/graph.js"></script>
+<script src="js/authorsfilter.js"></script>
+
+</body>
